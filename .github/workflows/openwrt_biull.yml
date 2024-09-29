@@ -37,6 +37,9 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
+      - name: default-settings
+        run: make defconfig
+
       - name: Download packages
         run: make download
 
