@@ -47,13 +47,13 @@ jobs:
         run:
           make -j$(nproc) V=s
       - name: Upload package
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: OpenWrt_package
           path: ./artifact/package/
 
       - name: Upload firmware
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: OpenWrt_firmware
           path: ./bin/targets/
